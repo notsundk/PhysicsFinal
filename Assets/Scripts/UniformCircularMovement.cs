@@ -19,12 +19,14 @@ public class UniformCircularMovement : MonoBehaviour
 
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             onConnection = false;
             float V = Mathf.Sqrt((PushForce * Radius) / PhysicsSystem.mass);
             PhysicsSystem.velocity = gameObject.transform.right * V;
         }
+        */
     }
 
     private void FixedUpdate()
