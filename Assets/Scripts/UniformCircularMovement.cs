@@ -19,14 +19,7 @@ public class UniformCircularMovement : MonoBehaviour
 
     void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.Space) == true)
-        {
-            onConnection = false;
-            float V = Mathf.Sqrt((PushForce * Radius) / PhysicsSystem.mass);
-            PhysicsSystem.velocity = gameObject.transform.right * V;
-        }
-        */
+       
     }
 
     private void FixedUpdate()
@@ -36,10 +29,12 @@ public class UniformCircularMovement : MonoBehaviour
             // Find Velocity =>  Velocity = SquareRoot( Force * Radius ) / Mass.
             float V = Mathf.Sqrt((PushForce * Radius) / PhysicsSystem.mass);
 
-            // Find T  =>  T = ( 2 * PI * Radius ) / Velocity
+            // T = (2 * PI * radius)/velocity
             float T = (2 * Mathf.PI * Radius) / V;
 
-            // Find Radian  =>  ChangedRadian = ( 2 * PI * t ) / T
+
+
+            // Radian  =>  ChangedRadian = ( 2 * PI * t ) / T
             float CurrentTime = Time.timeSinceLevelLoad;
             float ChangedRadian = (2 * Mathf.PI * CurrentTime) / T;
 
@@ -50,9 +45,12 @@ public class UniformCircularMovement : MonoBehaviour
             // Convert FinalDegree to FinalRadian
             float FinalRadian = FinalDegree * Mathf.PI / 180.0f;
 
+
+
             // Calculate Changed Position
             float ChangedPos_X = Radius * Mathf.Cos(FinalRadian);
             float ChangedPos_Y = Radius * Mathf.Sin(FinalRadian);
+
 
             // Apply Changed Position to this Object.
             gameObject.transform.position = RotatePoint.transform.position + new Vector3(ChangedPos_X, ChangedPos_Y, 0);
