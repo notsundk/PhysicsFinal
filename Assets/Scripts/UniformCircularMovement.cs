@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Uniform_01 : MonoBehaviour
+public class UniformCircularMovement : MonoBehaviour
 {
     public float PushForce = 1.0f;
     public float Radius = 1.0f;
