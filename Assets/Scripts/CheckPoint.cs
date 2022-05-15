@@ -19,7 +19,7 @@ public class CheckPoint : MonoBehaviour
         score = 0;
         combo = 1;
         comboDrain = false;
-        comboTimer = 10;
+        comboTimer = 0;
         scoreText.text = score.ToString();
         comboText.text = score.ToString();
     }
@@ -27,6 +27,7 @@ public class CheckPoint : MonoBehaviour
     private void Update()
     {
         ScoreCombo();
+        ComboDrain();
     }
 
     private void ScoreCombo()
@@ -62,7 +63,8 @@ public class CheckPoint : MonoBehaviour
 
     private void ComboDrain()
     {
-        
+        comboTimer += Time.deltaTime;
+        comboDrainText.text = comboTimer.ToString();
     }
 
     //private IEnumerator ComboDrain()
