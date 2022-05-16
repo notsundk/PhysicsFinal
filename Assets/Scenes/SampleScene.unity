@@ -705,7 +705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &652048766
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1850,12 +1850,12 @@ GameObject:
   - component: {fileID: 1772864024}
   - component: {fileID: 1772864023}
   m_Layer: 5
-  m_Name: Combo (1)
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1772864022
 RectTransform:
   m_ObjectHideFlags: 0
